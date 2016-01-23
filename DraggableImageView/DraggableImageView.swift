@@ -17,7 +17,19 @@ class DraggableImageView: UIView {
     private let dummyView: UIView = UIView()
     private var proportion: CGFloat = 0.0
     
-    var edgeInsets: UIEdgeInsets? = nil
+    var imageInset: UIEdgeInsets? {
+        get {
+            return scrollView.contentInset
+        }
+        set {
+            if let nv = newValue {
+                scrollView.contentInset = nv
+            }
+            else {
+                scrollView.contentInset = UIEdgeInsetsZero
+            }
+        }
+    }
     
     var image: UIImage? {
         get {

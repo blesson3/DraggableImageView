@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         
         imageView.image = UIImage(named: "test1")
+        imageView.imageInset = UIEdgeInsetsMake(30, 20, 30, 20)
     }
 
     override func prefersStatusBarHidden() -> Bool {
