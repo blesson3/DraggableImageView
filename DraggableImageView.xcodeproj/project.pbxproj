@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FB6C6FEF60570AC8E4C209E /* Pods_DraggableImageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6EC6BD48F9C7F5E2267A70E /* Pods_DraggableImageView.framework */; };
 		D9F3BF791C54263F00382BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F3BF781C54263F00382BE3 /* AppDelegate.swift */; };
 		D9F3BF7B1C54263F00382BE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F3BF7A1C54263F00382BE3 /* ViewController.swift */; };
 		D9F3BF7E1C54263F00382BE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F3BF7C1C54263F00382BE3 /* Main.storyboard */; };
 		D9F3BF801C54263F00382BE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F3BF7F1C54263F00382BE3 /* Assets.xcassets */; };
 		D9F3BF831C54263F00382BE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F3BF811C54263F00382BE3 /* LaunchScreen.storyboard */; };
+		D9F3BF8B1C54265900382BE3 /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F3BF8A1C54265900382BE3 /* DraggableImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42681D448CF11C8590306E1E /* Pods-DraggableImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DraggableImageView.release.xcconfig"; path = "Pods/Target Support Files/Pods-DraggableImageView/Pods-DraggableImageView.release.xcconfig"; sourceTree = "<group>"; };
+		44ED35E82582630B7D80B4FE /* Pods-DraggableImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DraggableImageView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DraggableImageView/Pods-DraggableImageView.debug.xcconfig"; sourceTree = "<group>"; };
+		B6EC6BD48F9C7F5E2267A70E /* Pods_DraggableImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DraggableImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F3BF751C54263F00382BE3 /* DraggableImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DraggableImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F3BF781C54263F00382BE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9F3BF7A1C54263F00382BE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		D9F3BF7F1C54263F00382BE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9F3BF821C54263F00382BE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9F3BF841C54263F00382BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9F3BF8A1C54265900382BE3 /* DraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB6C6FEF60570AC8E4C209E /* Pods_DraggableImageView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43CEC32E963A09BB34F2B690 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6EC6BD48F9C7F5E2267A70E /* Pods_DraggableImageView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D9F3BF6C1C54263F00382BE3 = {
 			isa = PBXGroup;
 			children = (
 				D9F3BF771C54263F00382BE3 /* DraggableImageView */,
 				D9F3BF761C54263F00382BE3 /* Products */,
+				EA7E2F6AE5837A8489B65773 /* Pods */,
+				43CEC32E963A09BB34F2B690 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +74,21 @@
 				D9F3BF781C54263F00382BE3 /* AppDelegate.swift */,
 				D9F3BF7A1C54263F00382BE3 /* ViewController.swift */,
 				D9F3BF7C1C54263F00382BE3 /* Main.storyboard */,
+				D9F3BF8A1C54265900382BE3 /* DraggableImageView.swift */,
 				D9F3BF7F1C54263F00382BE3 /* Assets.xcassets */,
 				D9F3BF811C54263F00382BE3 /* LaunchScreen.storyboard */,
 				D9F3BF841C54263F00382BE3 /* Info.plist */,
 			);
 			path = DraggableImageView;
+			sourceTree = "<group>";
+		};
+		EA7E2F6AE5837A8489B65773 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44ED35E82582630B7D80B4FE /* Pods-DraggableImageView.debug.xcconfig */,
+				42681D448CF11C8590306E1E /* Pods-DraggableImageView.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9F3BF871C54263F00382BE3 /* Build configuration list for PBXNativeTarget "DraggableImageView" */;
 			buildPhases = (
+				B312803A4D92600C403B8D4C /* Check Pods Manifest.lock */,
 				D9F3BF711C54263F00382BE3 /* Sources */,
 				D9F3BF721C54263F00382BE3 /* Frameworks */,
 				D9F3BF731C54263F00382BE3 /* Resources */,
+				E6B44990D7A8FA1E5E04C251 /* Embed Pods Frameworks */,
+				35C85310385709E01B0B91D3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +126,7 @@
 				TargetAttributes = {
 					D9F3BF741C54263F00382BE3 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = T349D9ANJX;
 					};
 				};
 			};
@@ -130,12 +161,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35C85310385709E01B0B91D3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DraggableImageView/Pods-DraggableImageView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B312803A4D92600C403B8D4C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6B44990D7A8FA1E5E04C251 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DraggableImageView/Pods-DraggableImageView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9F3BF711C54263F00382BE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D9F3BF7B1C54263F00382BE3 /* ViewController.swift in Sources */,
+				D9F3BF8B1C54265900382BE3 /* DraggableImageView.swift in Sources */,
 				D9F3BF791C54263F00382BE3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,23 +325,31 @@
 		};
 		D9F3BF881C54263F00382BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44ED35E82582630B7D80B4FE /* Pods-DraggableImageView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DraggableImageView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattblessed.DraggableImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		D9F3BF891C54263F00382BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42681D448CF11C8590306E1E /* Pods-DraggableImageView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DraggableImageView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattblessed.DraggableImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -284,6 +372,7 @@
 				D9F3BF891C54263F00382BE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
