@@ -131,15 +131,39 @@ extension DraggableImageView: UIScrollViewDelegate {
 // MARK: Render Image
 
 extension DraggableImageView {
-    // TODO: base image from view off of dimensions and cropping
     func renderImageFromView() -> UIImage {
         // basically screenshots
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0.0)
+        UIGraphicsBeginImageContextWithOptions(bounds.size, opaque, 0.0)
         self.layer.renderInContext(UIGraphicsGetCurrentContext()!)
         
         let img = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return img
+        if let _ = imageInset {
+            // then crop
+            let cropRect = cropRectWithRespectToInsets(img)
+            if let imageRef = CGImageCreateWithImageInRect(img.CGImage, cropRect) {
+                let i = UIImage(CGImage: imageRef)
+                return i
+            }
+            return img
+        }
+        else {
+            return img
+        }
+    }
+    
+    func cropRectWithRespectToInsets(i: UIImage) -> CGRect {
+        let left = (imageInset!.left/i.size.width)*CGFloat(CGImageGetWidth(i.CGImage))
+        let right = (imageInset!.right/i.size.width)*CGFloat(CGImageGetWidth(i.CGImage))
+        let top = (imageInset!.top)/i.size.height*CGFloat(CGImageGetHeight(i.CGImage))
+        let bottom = (imageInset!.bottom)/i.size.height*CGFloat(CGImageGetHeight(i.CGImage))
+        let translatedInsets = UIEdgeInsetsMake(top, left, bottom, right)
+        
+        let x: CGFloat = translatedInsets.left
+        let y: CGFloat = translatedInsets.top
+        let width: CGFloat = CGFloat(CGImageGetWidth(i.CGImage))-x-translatedInsets.right
+        let height: CGFloat = CGFloat(CGImageGetHeight(i.CGImage))-y-translatedInsets.bottom
+        return CGRectMake(x, y, width, height)
     }
 }

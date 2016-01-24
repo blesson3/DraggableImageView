@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -23,25 +24,25 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1G-Y7-L00" userLabel="Bottom Inset">
-                                <rect key="frame" x="29" y="486" width="262" height="30"/>
+                                <rect key="frame" x="29" y="506" width="262" height="10"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.32701684397163122" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="sBS-IP-U6F"/>
+                                    <constraint firstAttribute="height" constant="10" id="sBS-IP-U6F"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0QU-3Y-sKX" userLabel="Top Inset">
-                                <rect key="frame" x="29" y="51" width="262" height="30"/>
+                                <rect key="frame" x="29" y="51" width="262" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.32701684399999997" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="97U-fH-eGg"/>
+                                    <constraint firstAttribute="height" constant="50" id="97U-fH-eGg"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckh-Nk-EWM" userLabel="Left Inset">
-                                <rect key="frame" x="29" y="51" width="20" height="465"/>
+                                <rect key="frame" x="29" y="51" width="0.0" height="465"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.32701684399999997" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="465" id="0Kg-rh-cHY"/>
-                                    <constraint firstAttribute="width" constant="20" id="4Rx-tJ-42W"/>
+                                    <constraint firstAttribute="width" id="4Rx-tJ-42W"/>
                                     <constraint firstAttribute="height" constant="30" id="bVF-Eu-kRJ"/>
                                     <constraint firstAttribute="height" constant="465" id="imu-lW-f1P"/>
                                 </constraints>
@@ -54,12 +55,12 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGg-P0-35i" userLabel="Right Inset">
-                                <rect key="frame" x="271" y="51" width="20" height="465"/>
+                                <rect key="frame" x="191" y="51" width="100" height="465"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.32701684399999997" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8Ud-y2-qwl"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="465" id="wcm-aZ-vcM"/>
-                                    <constraint firstAttribute="width" constant="20" id="wyd-tu-omG"/>
+                                    <constraint firstAttribute="width" constant="100" id="wyd-tu-omG"/>
                                     <constraint firstAttribute="height" constant="465" id="yUq-Pp-ThH"/>
                                 </constraints>
                                 <variation key="default">
@@ -70,15 +71,24 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUC-YY-EJR">
+                                <rect key="frame" x="136" y="530" width="49" height="30"/>
+                                <state key="normal" title="Render"/>
+                                <connections>
+                                    <action selector="renderButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ps6-AJ-b0l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="y1G-Y7-L00" firstAttribute="width" secondItem="hUy-TA-j09" secondAttribute="width" id="12z-EJ-3r8"/>
                             <constraint firstItem="hGg-P0-35i" firstAttribute="top" secondItem="hUy-TA-j09" secondAttribute="top" id="6q2-je-xGw"/>
+                            <constraint firstItem="EUC-YY-EJR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="824-FA-fng"/>
                             <constraint firstItem="0QU-3Y-sKX" firstAttribute="trailing" secondItem="hUy-TA-j09" secondAttribute="trailing" id="8ot-RU-uj7"/>
                             <constraint firstItem="y1G-Y7-L00" firstAttribute="bottom" secondItem="hUy-TA-j09" secondAttribute="bottom" id="AAx-6K-uxc"/>
                             <constraint firstItem="hGg-P0-35i" firstAttribute="height" secondItem="hUy-TA-j09" secondAttribute="height" id="EMo-n3-Ncc"/>
                             <constraint firstItem="hUy-TA-j09" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="29" id="FM0-Mi-ZKT"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="EUC-YY-EJR" secondAttribute="bottom" constant="8" id="G4C-vc-Cio"/>
                             <constraint firstItem="y1G-Y7-L00" firstAttribute="centerX" secondItem="hUy-TA-j09" secondAttribute="centerX" id="LOb-Ae-Lt6"/>
                             <constraint firstItem="hGg-P0-35i" firstAttribute="bottom" secondItem="hUy-TA-j09" secondAttribute="bottom" id="MIL-md-UXs"/>
                             <constraint firstItem="ckh-Nk-EWM" firstAttribute="leading" secondItem="hUy-TA-j09" secondAttribute="leading" id="hn4-zQ-guy"/>

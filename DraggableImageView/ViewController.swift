@@ -16,7 +16,12 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         
         imageView.image = UIImage(named: "test1")
-        imageView.imageInset = UIEdgeInsetsMake(30, 20, 30, 20)
+        imageView.imageInset = UIEdgeInsetsMake(50, 0, 10, 100)
+    }
+    
+    @IBAction func renderButtonPressed(sender: AnyObject) {
+        let i = imageView.renderImageFromView()
+        NSLog("\(i)")
     }
 
     override func prefersStatusBarHidden() -> Bool {
