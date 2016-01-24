@@ -70,9 +70,6 @@ class DraggableImageView: UIView {
         imageView.opaque = false
         
         scrollView.addSubview(imageView)
-        
-        imageView.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.4) // testing
-        scrollView.backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.4) // testing
     }
     
     private func layoutImageView(image i: UIImage?) {
